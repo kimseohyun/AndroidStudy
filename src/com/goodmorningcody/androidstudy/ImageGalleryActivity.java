@@ -22,6 +22,7 @@ public class ImageGalleryActivity extends Activity {
 		
 		galleryLayout = (LinearLayout)findViewById(R.id.gallery_layout);
 		
+		// 안녕하세요.
 		for( int i=1; i<=4; ++i ) {
 			 String fileName = "img_0"+i+".jpg";
 			 try {
