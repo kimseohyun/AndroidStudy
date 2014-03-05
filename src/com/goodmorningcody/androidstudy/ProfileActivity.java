@@ -24,10 +24,7 @@ public class ProfileActivity extends Activity {
 	    
 	    setContentView(R.layout.profile_activity);
 	    
-	    //findViewById(R)
-	    Button goToFacebook = (Button)findViewById(R.id.profile_go_to_facebook);
-	    
-		// 0
+	    Button goToFacebook = (Button)findViewById(R.id.profile_go_to_facebook);	    
 	    goToFacebook.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -37,23 +34,17 @@ public class ProfileActivity extends Activity {
 				startActivity(browserIntent);
 			}
 		});
-
 	    
-	    // 1
-	    OnClickListener onClickListner = new OnClickListener() {			
+	    Button goToGallery = (Button)findViewById(R.id.profile_go_to_gallery);	    
+	    goToGallery.setOnClickListener(new OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
-				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/okieyun"));
-				startActivity(browserIntent);
+				// TODO Auto-generated method stub
+				Intent galleryIntent = new Intent(getApplicationContext(), ImageGalleryActivity.class);
+				startActivity(galleryIntent);
 			}
-		};
-		goToFacebook.setOnClickListener(onClickListner);
-		
-	    // 2
-		MyOnClickListener myListener = new MyOnClickListener();
-		goToFacebook.setOnClickListener(myListener);
-		
-	    finish();
+		});
 	}
 	
 	@Override
